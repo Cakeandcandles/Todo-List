@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  color: #333;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 35px 30px;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+  color: #333;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+input[type="text"],
+select,
+button {
+  font-size: 1rem;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 120px;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #7d5fff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(125, 95, 255, 0.4);
+}
+
+button[type="submit"] {
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+
+#task-list {
+  list-style: none;
+  padding-top: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 1rem;
+  color: #333;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: white;
+  position: relative;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  /*flex-grow: 1;*/
+  flex: 1;
+  overflow-wrap: break-word;
+}
+
+.task-text {
+  font-weight: 500;
+}
+
+li small {
+  font-size: 0.85em;
+  font-weight: bold;
+  opacity: 0.75;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+button.delete {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #d90429;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
